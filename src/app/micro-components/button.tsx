@@ -27,7 +27,7 @@ export default function Button({
       "bg-gradient-to-r from-primary-blue to-primary-purple text-white hover:scale-105 hover:shadow-lg",
     bordered:
       "border border-grey text-foreground hover:bg-foreground hover:text-white",
-    link: "group-hover:bg-linear-to-r group-hover:from-primary-blue group-hover:to-primary-purple group-hover:text-transparent group-hover:bg-clip-text",
+    link: "hover:bg-linear-to-r hover:from-primary-blue hover:to-primary-purple hover:text-transparent hover:bg-clip-text",
   };
 
   // Arrow animation classes
@@ -53,7 +53,9 @@ export default function Button({
           className={`size-4.5 object-contain duration-500 ease-in-out ${
             variant === "primary"
               ? "brightness-[2000]"
-              : "group-hover:brightness-[2000]"
+              : variant === "bordered"
+              ? "group-hover:brightness-[2000]"
+              : ""
           }`}
         />
       )}
