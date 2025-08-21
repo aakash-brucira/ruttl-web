@@ -14,7 +14,7 @@ export default function Header() {
                 alt="Ruttl Logo"
                 width={86}
                 height={24}
-                className="w-21.5 h-auto object-contain"
+                className="w-21.5 h-auto object-contain object-center"
               />
             </Link>
 
