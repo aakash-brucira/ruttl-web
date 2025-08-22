@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex flex-col container pt-16 pb-8">
+      <div className="flex flex-col gap-12 container pt-16 pb-8 border-b border-grey sm:gap-14 md:gap-16 lg:gap-20">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-9 gap-y-12 lg:grid-cols-5">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="block mb-3">
@@ -65,7 +65,7 @@ export default function Footer() {
                 alt="Join on slack"
                 width={173}
                 height={44}
-                className="w-44 h-auto max-w-full object-contain object-center"
+                className="w-44 h-auto object-contain object-center"
               />
             </Link>
           </div>
@@ -253,6 +253,41 @@ export default function Footer() {
             </div>
           ))}
         </div>
+
+        <div className="flex items-center justify-center flex-wrap gap-8 md:gap-10">
+          <Image
+            src="/media/images/product-of-day.webp"
+            alt="Product of the day"
+            width={250}
+            height={54}
+            className="w-56 h-auto object-contain object-center md:w-[250px]"
+          />
+
+          <Image
+            src="/media/images/golden-kitty-awards.webp"
+            alt="Golden Kitty Awards"
+            width={146}
+            height={44}
+            className="w-32 h-auto object-contain object-center md:w-[146px]"
+          />
+        </div>
+      </div>
+
+      <div className="container flex flex-col justify-center items-center gap-7 py-8 md:py-10 sm:flex-row sm:justify-between">
+        <p className="text-sm leading-[1.4] font-medium text-foreground-light">
+          &copy; 2019-2025 Brucira Softwares Pvt. Ltd.
+        </p>
+
+        <p className="flex gap-3.5 text-sm leading-[1.4] font-medium text-foreground-light">
+          Powered by
+          <Image
+            src="/media/images/brucira-logo.webp"
+            alt="Brucira Logo"
+            width={102}
+            height={11}
+            className="w-[102px] h-auto object-contain object-center"
+          />
+        </p>
       </div>
     </footer>
   );
