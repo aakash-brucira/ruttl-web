@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer>
       <div className="flex flex-col container pt-16 pb-8">
-        <div className="grid grid-cols-5 gap-x-3">
-          <div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-9 gap-y-12 lg:grid-cols-5">
+          <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="block mb-3">
               <Image
                 src="/media/images/logo.svg"
@@ -71,9 +71,187 @@ export default function Footer() {
           </div>
 
           {/* Menu List */}
-          <div>
-            <h2 className="text-sm">Features</h2>
-          </div>
+          {[
+            [
+              {
+                menuTitle: "Features",
+                menu: [
+                  {
+                    menuLabel: "Website Feedback Tool",
+                    link: "#website-feedback-tool",
+                  },
+                  {
+                    menuLabel: "Mobile Feedback Tool",
+                    link: "#mobile-feedback-tool",
+                  },
+                  {
+                    menuLabel: "Bug Tracking",
+                    link: "#bug-tracking",
+                  },
+                  {
+                    menuLabel: "PDF Annotation",
+                    link: "#pdf-annotation",
+                  },
+                  {
+                    menuLabel: "Comment on Live website",
+                    link: "#comment-on-live-website",
+                  },
+                  {
+                    menuLabel: "Edit Website",
+                    link: "#edit-website",
+                  },
+                  {
+                    menuLabel: "Review Website Versions",
+                    link: "#review-website-versions",
+                  },
+                  {
+                    menuLabel: "Integrations",
+                    link: "#integrations",
+                  },
+                ],
+              },
+            ],
+            [
+              {
+                menuTitle: "Features",
+                menu: [
+                  {
+                    menuLabel: "Blog",
+                    link: "#blog",
+                  },
+                  {
+                    menuLabel: "About us",
+                    link: "#about-us",
+                  },
+                  {
+                    menuLabel: "Contact Us",
+                    link: "#contact-us",
+                  },
+                  {
+                    menuLabel: "Pricing",
+                    link: "#pricing",
+                  },
+                  {
+                    menuLabel: "Sitemap",
+                    link: "#sitemap",
+                  },
+                  {
+                    menuLabel: "Press Kit",
+                    link: "#press-kit",
+                  },
+                  {
+                    menuLabel: "Alternative",
+                    link: "#alternative",
+                  },
+                ],
+              },
+            ],
+            [
+              {
+                menuTitle: "Legal",
+                menu: [
+                  {
+                    menuLabel: "Term and Conditions",
+                    link: "#term-and-conditions",
+                  },
+                  {
+                    menuLabel: "Privacy Policy",
+                    link: "#privacy-policy",
+                  },
+                  {
+                    menuLabel: "Cookies",
+                    link: "#cookies",
+                  },
+                  {
+                    menuLabel: "ISO",
+                    link: "#iso",
+                  },
+                  {
+                    menuLabel: "GDPR",
+                    link: "#gdpr",
+                    badge: "Coming soon",
+                  },
+                ],
+              },
+              {
+                menuTitle: "Top Blog Posts",
+                menu: [
+                  {
+                    menuLabel: "Top Web design Blogs",
+                    link: "#top-web-design-blogs",
+                  },
+                  {
+                    menuLabel: "Top Free PDF Annotation Tools",
+                    link: "#top-free-pdf-annotation-tools",
+                  },
+                ],
+              },
+            ],
+            [
+              {
+                menuTitle: "Ruttl for",
+                menu: [
+                  {
+                    menuLabel: "For Agencies",
+                    link: "#for-agencies",
+                  },
+                  {
+                    menuLabel: "For Product Companies",
+                    link: "#for-product-companies",
+                  },
+                  {
+                    menuLabel: "For QA Team",
+                    link: "#for-qa-team",
+                  },
+                ],
+              },
+              {
+                menuTitle: "Tools",
+                menu: [
+                  {
+                    menuLabel: "Image Feedback Tool",
+                    link: "#image-feedback-tool",
+                  },
+                  {
+                    menuLabel: "Chrome Extension",
+                    link: "#chrome-extension",
+                  },
+                ],
+              },
+            ],
+          ].map((menuGroup, mainIndex) => (
+            <div key={mainIndex}>
+              {menuGroup.map((mainMenu, index) => (
+                <div key={index} className={index > 0 ? "mt-7 md:mt-8" : ""}>
+                  <h2 className="text-sm leading-[1.4] mb-[13px] font-semibold">
+                    {mainMenu.menuTitle}
+                  </h2>
+
+                  <ul className="flex flex-col gap-[13px] text-sm leading-[1.4]">
+                    {mainMenu.menu.map((menuItem, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="flex items-center gap-2.5 text-foreground-light transition-all duration-500 ease-in-out hover:text-foreground"
+                      >
+                        <Link
+                          className="relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:h-[1px] before:w-0 before:bg-foreground before:duration-500 ease-in-out hover:before:w-full"
+                          href={menuItem.link}
+                        >
+                          {menuItem.menuLabel}
+                        </Link>
+
+                        {menuItem.badge && (
+                          <span className="py-[5px] px-2 bg-grey-light rounded-[40px] text-[11px] font-medium leading-[1.4]">
+                            {menuItem.badge}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </footer>

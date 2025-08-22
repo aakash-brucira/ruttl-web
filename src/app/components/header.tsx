@@ -18,7 +18,7 @@ export default function Header() {
               />
             </Link>
 
-            <div className="flex items-center gap-3">
+            <div className="items-center gap-3 hidden md:flex">
               {[
                 {
                   icon: "/media/images/custom-icons/website-icon.webp",
@@ -85,7 +85,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="flex gap-3 items-center">
+          <div className="gap-3 items-center hidden md:flex">
             <Button href="#" label="Pricing" variant="link" />
             <Button href="#" label="Login" variant="bordered" />
             <Button href="#" label="Get Started" />
