@@ -11,7 +11,7 @@ interface ButtonProps {
   hasArrow?: boolean;
 }
 
-export default function Button({
+export default function ButtonLarge({
   href = "#",
   label = "Get Started",
   variant = "primary",
@@ -19,7 +19,7 @@ export default function Button({
 }: ButtonProps) {
   // Base classes for all buttons
   const baseClasses =
-    "group w-max cursor-pointer text-[14px] tracking-[0] leading-5 flex items-center rounded-lg transition-all duration-500 ease-in-out";
+    "group w-max cursor-pointer -tracking-[0.03em] text-base leading-6 font-semibold flex items-center rounded-lg transition-all duration-500 ease-in-out";
 
   // Variant specific classes
   const variantClasses: Record<ButtonVariant, string> = {
@@ -40,7 +40,7 @@ export default function Button({
     <Link
       href={href}
       className={`${buttonClasses} ${
-        variant === "bordered" ? "px-[19.5px] py-[11px]" : "px-5 py-3"
+        variant === "bordered" ? "px-6 py-3.5" : "px-6 py-4"
       }`}
     >
       {label}

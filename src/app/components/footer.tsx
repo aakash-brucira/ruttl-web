@@ -241,7 +241,7 @@ export default function Footer() {
                         </Link>
 
                         {menuItem.badge && (
-                          <span className="py-[5px] px-2 bg-grey-light rounded-[40px] text-[11px] font-medium leading-[1.4]">
+                          <span className="py-[5px] px-2 bg-grey-light rounded-[40px] text-[11px] leading-[1.4]">
                             {menuItem.badge}
                           </span>
                         )}
@@ -274,11 +274,11 @@ export default function Footer() {
       </div>
 
       <div className="container flex flex-col justify-center items-center gap-7 py-8 md:py-10 sm:flex-row sm:justify-between">
-        <p className="text-sm leading-[1.4] font-medium text-foreground-light">
+        <p className="text-sm leading-[1.4] text-foreground-light">
           &copy; 2019-2025 Brucira Softwares Pvt. Ltd.
         </p>
 
-        <p className="flex gap-3.5 text-sm leading-[1.4] font-medium text-foreground-light">
+        <p className="flex gap-3.5 text-sm leading-[1.4] text-foreground-light">
           Powered by
           <Image
             src="/media/images/brucira-logo.webp"

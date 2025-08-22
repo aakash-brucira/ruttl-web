@@ -24,6 +24,8 @@
   --font-helvetica: var(--font-helvetica);
   --font-inter: var(--font-inter);
   --font-ppneuemontreal: var(--font-ppneuemontreal);
+
+  --shadow-primary: 0px 2px 4px 0px #1606470d;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -42,6 +44,7 @@ body {
   color: var(--foreground);
 
   font-family: var(--font-inter);
+  font-weight: 500;
 }
 
 .container {
@@ -49,4 +52,48 @@ body {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+h1 strong,
+h1 b,
+h2 strong,
+h2 b,
+h3 strong,
+h3 b,
+h4 strong,
+h4 b,
+h5 strong,
+h5 b,
+h6 strong,
+h6 b {
+  background: linear-gradient(
+    90deg,
+    var(--primary-blue) 0%,
+    var(--primary-purple) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 639px) {
+  h1 br,
+  h2 br,
+  h3 br,
+  h4 br,
+  h5 br,
+  h6 br,
+  p br {
+    display: none;
+  }
+}
+p {
+  font-weight: 500;
 }

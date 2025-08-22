@@ -56,7 +56,7 @@ export default function Header() {
       <div className="container !px-0 relative xl:!px-4 xl:py-5">
         <div className="xl:flex items-center justify-between gap-x-12">
           <div className="flex items-center gap-6">
-            <div className="flex items-center justify-between px-4 py-5 w-full bg-white xl:w-auto z-[2] xl:px-0 xl:py-0 xl:bg-transparent">
+            <div className="flex items-center justify-between px-4 py-5 w-full xl:w-auto z-[2] xl:px-0 xl:py-0">
               <Link href="/">
                 <Image
                   src="/media/images/logo.svg"
@@ -97,9 +97,9 @@ export default function Header() {
             </div>
 
             <div
-              className={`flex z-[1] flex-col h-screen overflow-y-auto bg-white px-4 pt-20 pb-8 items-center justify-start gap-3 absolute top-0 left-0 right-0 w-full duration-700 transition-all ease-in-out ${
+              className={`flex z-[1] flex-col h-screen overflow-y-auto bg-white px-4 pt-20 pb-8 items-center justify-start gap-3 fixed inset-0 w-full duration-700 transition-all ease-in-out ${
                 isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-              } xl:h-auto xl:flex-row xl:px-0 xl:pt-0 xl:pb-0 xl:static xl:justify-center xl:bg-transparent xl:translate-0`}
+              } xl:h-auto xl:flex-row xl:px-0 xl:py-0 xl:static xl:justify-center xl:bg-transparent xl:translate-0`}
             >
               {[
                 {
@@ -137,7 +137,7 @@ export default function Header() {
                   key={index}
                   href={item.href}
                   onClick={handleCloseMenu}
-                  className={`group w-max font-inter font-medium text-[15px] leading-6 flex items-center gap-2 border rounded-[64px] px-4 py-[9px] ${
+                  className={`group w-max font-inter text-[15px] leading-6 flex items-center gap-2 border rounded-[64px] px-4 py-[9px] ${
                     item.icon ? "border-grey" : "border-transparent"
                   }`}
                 >
