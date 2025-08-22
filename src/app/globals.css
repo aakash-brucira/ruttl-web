@@ -6,6 +6,7 @@
   --foreground-light: #594d7f;
   --grey: #e2e1ea;
   --grey-light: #f3f4f9;
+  --primary-orange: #ffbf49;
   --primary-blue: #4f16ee;
   --primary-purple: #8f16ee;
 }
@@ -16,6 +17,7 @@
   --color-foreground-light: var(--foreground-light);
   --color-grey: var(--grey);
   --color-grey-light: var(--grey-light);
+  --color-primary-orange: var(--primary-orange);
   --color-primary-blue: var(--primary-blue);
   --color-primary-purple: var(--primary-purple);
 

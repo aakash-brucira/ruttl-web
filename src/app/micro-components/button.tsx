@@ -19,7 +19,7 @@ export default function Button({
 }: ButtonProps) {
   // Base classes for all buttons
   const baseClasses =
-    "group font-inter font-medium cursor-pointer text-[14px] leading-5 flex items-center rounded-lg px-5 transition-all duration-500 ease-in-out";
+    "group w-max font-inter font-medium cursor-pointer text-[14px] leading-5 flex items-center rounded-lg px-5 transition-all duration-500 ease-in-out";
 
   // Variant specific classes
   const variantClasses: Record<ButtonVariant, string> = {
