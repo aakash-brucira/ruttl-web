@@ -12,6 +12,7 @@ interface ButtonProps {
 
 interface ImageProps {
   path: string;
+  bgPath?: string;
   title?: string;
   width?: number;
   height?: number;
@@ -31,7 +32,14 @@ interface HeroProps {
 
 export default function Hero({ heroData }: HeroProps) {
   return (
-    <section className="flex bg-gradient-to-b from-[#FBFBFD] to-white flex-col gap-2.5 justify-between pt-20 md:pt-24 xl:pt-36">
+    <section
+      className="flex bg-gradient-to-b from-[#FBFBFD] bg-contain bg-[center_bottom] bg-no-repeat to-white flex-col gap-2.5 justify-between pt-20 md:pt-24 xl:pt-36"
+      style={{
+        backgroundImage: heroData.bannerImage?.bgPath
+          ? `url('${heroData.bannerImage.bgPath}')`
+          : undefined,
+      }}
+    >
       <div className="flex container flex-col items-center text-center">
         {heroData.badgeImage && (
           <Image

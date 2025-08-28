@@ -27,6 +27,7 @@ const heroData = {
   ],
   bannerImage: {
     path: "/media/images/home-hero.webp",
+    bgPath: "/media/images/home-hero-bg.webp",
     title: "Home hero banner",
     width: 1440,
     height: 433,
